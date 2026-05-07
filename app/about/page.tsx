@@ -1,34 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Target, Eye, Award } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function AboutPage() {
   const { t } = useLanguage();
-  
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
     transition: { duration: 0.5 }
   };
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
-      <section className="bg-slate-900 py-20 text-slate-50 text-center">
+      <section className="bg-primary py-20 text-white text-center">
         <div className="container mx-auto px-4">
           <motion.h1 
-            {...fadeInUp}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            {t("about.title")}
+            {t("about.hero.title")}
           </motion.h1>
           <motion.p 
-            {...fadeInUp} transition={{ delay: 0.1 }}
-            className="text-slate-300 text-lg max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-white/80 text-lg max-w-2xl mx-auto"
           >
-            {t("about.subtitle")}
+            {t("about.hero.desc")}
           </motion.p>
         </div>
       </section>
@@ -36,95 +41,82 @@ export default function AboutPage() {
       {/* Institute Introduction */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full md:w-1/2 space-y-6"
-            >
-              <h2 className="text-3xl font-bold text-primary">{t("about.legacy.title")}</h2>
-              <p className="text-foreground/80 leading-relaxed text-lg">
-                {t("about.legacy.desc1")}
-              </p>
-              <p className="text-foreground/80 leading-relaxed">
-                {t("about.legacy.desc2")}
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div {...fadeInUp}>
+              <h2 className="text-3xl font-bold mb-6 text-primary">{t("about.intro.title")}</h2>
+              <div className="space-y-4 text-foreground/70 leading-relaxed">
+                <p>{t("about.intro.desc1")}</p>
+                <p>{t("about.intro.desc2")}</p>
+              </div>
             </motion.div>
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full md:w-1/2"
+              {...fadeInUp}
+              className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
             >
-              <div className="aspect-video bg-primary/10 rounded-2xl border border-border/50 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-                <span className="text-primary/50 font-medium">Dhiman Education Campus</span>
+              <Image 
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" 
+                alt="Coaching Class" 
+                fill 
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div 
+              {...fadeInUp}
+              className="bg-card p-8 rounded-3xl shadow-sm border border-border flex gap-6"
+            >
+              <div className="bg-primary/10 p-4 rounded-2xl h-fit">
+                <Target className="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-3">{t("about.mission.title")}</h3>
+                <p className="text-foreground/70">{t("about.mission.desc")}</p>
+              </div>
+            </motion.div>
+            <motion.div 
+              {...fadeInUp} transition={{ delay: 0.2 }}
+              className="bg-card p-8 rounded-3xl shadow-sm border border-border flex gap-6"
+            >
+              <div className="bg-secondary/10 p-4 rounded-2xl h-fit">
+                <Eye className="h-8 w-8 text-secondary" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-3">{t("about.vision.title")}</h3>
+                <p className="text-foreground/70">{t("about.vision.desc")}</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Mission and Vision */}
-      <section className="py-20 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="p-8 bg-card rounded-2xl border border-border shadow-sm"
-            >
-              <h3 className="text-2xl font-bold text-primary mb-4">{t("about.mission.title")}</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                {t("about.mission.desc")}
-              </p>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="p-8 bg-card rounded-2xl border border-border shadow-sm"
-            >
-              <h3 className="text-2xl font-bold text-secondary mb-4">{t("about.vision.title")}</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                {t("about.vision.desc")}
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Teaching Philosophy */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">{t("about.philosophy.title")}</h2>
-            <div className="space-y-6">
-              {[
-                { title: t("about.philosophy.p1.title"), desc: t("about.philosophy.p1.desc") },
-                { title: t("about.philosophy.p2.title"), desc: t("about.philosophy.p2.desc") },
-                { title: t("about.philosophy.p3.title"), desc: t("about.philosophy.p3.desc") },
-                { title: t("about.philosophy.p4.title"), desc: t("about.philosophy.p4.desc") }
-              ].map((item, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex gap-4"
-                >
-                  <CheckCircle2 className="h-6 w-6 text-secondary shrink-0 mt-1" />
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                    <p className="text-foreground/70">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("about.why.title")}</h2>
+            <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <motion.div 
+                key={i}
+                {...fadeInUp} transition={{ delay: i * 0.1 }}
+                className="flex items-center gap-4 bg-card p-5 rounded-2xl border border-border hover:shadow-md transition-shadow"
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                </div>
+                <span className="font-medium text-foreground/80">{t(`about.why.f${i}`)}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

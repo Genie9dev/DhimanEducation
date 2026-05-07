@@ -20,39 +20,24 @@ export default function CoursesPage() {
       title: t("home.courses.c1.title"),
       description: t("courses.c1.desc"),
       color: "bg-blue-500",
-      subjects: t("home.courses.c1.desc").split(", "),
-      features: [
-        t("about.philosophy.p1.title"),
-        t("about.philosophy.p4.title"),
-        t("home.features.f1.title"),
-        t("about.philosophy.p3.title")
-      ],
+      subjects: t("home.courses.c1.desc").split(","),
+      features: t("courses.c1.features").split(","),
       timing: "4:00 PM - 7:00 PM"
     },
     {
       title: t("home.courses.c2.title"),
       description: t("courses.c2.desc"),
       color: "bg-secondary",
-      subjects: t("home.courses.c2.desc").split(", "),
-      features: [
-        t("home.features.f2.title"),
-        t("home.features.f5.title"),
-        t("about.philosophy.p4.title"),
-        t("home.features.f6.title")
-      ],
+      subjects: t("home.courses.c2.desc").split(","),
+      features: t("courses.c2.features").split(","),
       timing: "7:00 AM - 11:00 AM"
     },
     {
       title: t("home.courses.c3.title"),
       description: t("courses.c3.desc"),
       color: "bg-purple-500",
-      subjects: t("home.courses.c3.desc").split(", "),
-      features: [
-        t("about.philosophy.p3.title"),
-        t("home.features.f6.title"),
-        t("about.philosophy.p4.title"),
-        t("home.features.f5.title")
-      ],
+      subjects: t("home.courses.c3.desc").split(","),
+      features: t("courses.c3.features").split(","),
       timing: "4:00 PM - 8:00 PM"
     }
   ];
@@ -60,7 +45,7 @@ export default function CoursesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
-      <section className="bg-slate-900 py-20 text-slate-50 text-center">
+      <section className="bg-primary py-20 text-white text-center">
         <div className="container mx-auto px-4">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +58,7 @@ export default function CoursesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-300 text-lg max-w-2xl mx-auto"
+            className="text-white/80 text-lg max-w-2xl mx-auto"
           >
             {t("courses.desc")}
           </motion.p>
@@ -95,8 +80,8 @@ export default function CoursesPage() {
                   <BookOpen className="w-48 h-48" />
                 </div>
                 <div className="relative z-10">
-                  <h2 className="text-3xl font-bold mb-4">{course.title}</h2>
-                  <div className="flex items-center gap-2 font-medium bg-white/20 w-fit px-3 py-1.5 rounded-full text-sm backdrop-blur-sm">
+                  <h2 className="text-3xl font-bold mb-4 leading-tight">{course.title}</h2>
+                  <div className="flex items-center gap-2 font-medium bg-white/20 w-fit px-3 py-1.5 rounded-full text-xs backdrop-blur-sm">
                     <Clock className="w-4 h-4" />
                     <span>{course.timing}</span>
                   </div>
@@ -113,7 +98,7 @@ export default function CoursesPage() {
                   <div>
                     <h3 className="font-semibold text-lg flex items-center gap-2 mb-4">
                       <BookOpen className="w-5 h-5 text-secondary" />
-                      Subjects
+                      {t("courses.subjects")}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {course.subjects.map((subject, i) => (

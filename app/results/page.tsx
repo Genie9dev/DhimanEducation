@@ -14,18 +14,18 @@ export default function ResultsPage() {
   };
 
   const toppers = [
-    { name: "Student Name 1", score: "98%", subject: "Commerce", year: "2024" },
-    { name: "Student Name 2", score: "97%", subject: "Std 10", year: "2024" },
-    { name: "Student Name 3", score: "95%", subject: "Arts", year: "2024" },
-    { name: "Student Name 4", score: "94%", subject: "Commerce", year: "2024" },
-    { name: "Student Name 5", score: "93%", subject: "Std 10", year: "2024" },
-    { name: "Student Name 6", score: "92%", subject: "Commerce", year: "2024" },
+    { name: "Suthar Dev", score: "96.40 PR", subject: "12 Commerce", year: "2024" },
+    { name: "Patel Hetvi", score: "95.12 PR", subject: "Std 10", year: "2024" },
+    { name: "Rami Kavya", score: "94.88 PR", subject: "12 Arts", year: "2024" },
+    { name: "Soni Mann", score: "92.30 PR", subject: "12 Commerce", year: "2024" },
+    { name: "Thakor Aryan", score: "91.15 PR", subject: "Std 10", year: "2024" },
+    { name: "Patel Dhruvi", score: "90.05 PR", subject: "12 Commerce", year: "2024" },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
-      <section className="bg-slate-900 py-20 text-slate-50 text-center relative overflow-hidden">
+      <section className="bg-primary py-20 text-white text-center relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
           <Trophy className="w-[500px] h-[500px]" />
         </div>
@@ -44,14 +44,14 @@ export default function ResultsPage() {
           >
             {t("results.title")}
           </motion.h1>
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-slate-50 text-xl font-bold max-w-2xl mx-auto bg-white/10 py-3 px-6 rounded-lg border border-white/20"
+            className="text-white text-lg md:text-xl font-bold max-w-2xl mx-auto bg-white/10 py-4 px-6 rounded-2xl border border-white/20 backdrop-blur-sm"
           >
             {t("results.desc")}
-          </motion.p>
+          </motion.div>
         </div>
       </section>
 
@@ -69,20 +69,20 @@ export default function ResultsPage() {
                 key={index}
                 {...fadeInUp}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-6 text-center relative hover:shadow-lg transition-shadow group overflow-hidden"
+                className="bg-card border border-border rounded-3xl p-6 text-center relative hover:shadow-lg transition-all group overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-16 h-16 bg-secondary/10 rounded-bl-full flex items-start justify-end p-3 z-0">
                   <Star className="h-5 w-5 text-secondary" />
                 </div>
                 <div className="relative z-10">
                   <div className="w-24 h-24 mx-auto bg-primary/5 rounded-full border-4 border-background shadow-md mb-4 flex items-center justify-center overflow-hidden">
-                    <span className="text-foreground/30 text-xs">Photo</span>
+                    <Trophy className="h-10 w-10 text-primary/20" />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-1">{topper.name}</h3>
-                  <p className="text-sm text-foreground/60 mb-4">{topper.subject} • {topper.year}</p>
-                  <div className="inline-flex items-center justify-center gap-2 bg-secondary/20 text-secondary-foreground font-bold px-4 py-2 rounded-full w-full">
+                  <p className="text-sm text-foreground/60 mb-4">{topper.subject} • {t("results.year")} {topper.year}</p>
+                  <div className="inline-flex items-center justify-center gap-2 bg-secondary/20 text-secondary-foreground font-bold px-4 py-3 rounded-2xl w-full">
                     <Award className="h-5 w-5 text-secondary" />
-                    <span className="text-lg">{topper.score}</span>
+                    <span className="text-xl">{topper.score}</span>
                   </div>
                 </div>
               </motion.div>
@@ -94,20 +94,18 @@ export default function ResultsPage() {
       {/* Stats Callout */}
       <section className="py-20 bg-primary/5 border-t border-border">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-8">{t("results.summary")}</h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="bg-card border border-border p-6 rounded-xl min-w-[200px]">
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-foreground/70 text-sm">{t("results.s1")}</div>
-            </div>
-            <div className="bg-card border border-border p-6 rounded-xl min-w-[200px]">
-              <div className="text-4xl font-bold text-primary mb-2">100+</div>
-              <div className="text-foreground/70 text-sm">{t("results.s2")}</div>
-            </div>
-            <div className="bg-card border border-border p-6 rounded-xl min-w-[200px]">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-foreground/70 text-sm">{t("results.s3")}</div>
-            </div>
+          <h2 className="text-2xl font-bold mb-12">{t("results.summary")}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[1, 2, 3].map((i) => (
+              <motion.div 
+                key={i}
+                {...fadeInUp} transition={{ delay: i * 0.1 }}
+                className="bg-card border border-border p-8 rounded-3xl shadow-sm"
+              >
+                <div className="text-5xl font-bold text-primary mb-3">{t(`results.s${i}.val`)}</div>
+                <div className="text-foreground/70 font-medium">{t(`results.s${i}.label`)}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

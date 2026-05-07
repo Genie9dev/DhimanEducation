@@ -117,14 +117,7 @@ export default function Home() {
           </div>
           {/* Rest of this section remains static or we can translate it later. I will leave it static English for now since it's not in the dictionary to save space, or I can just leave it as is. */}
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: t("home.features.f1.title"), desc: t("home.features.f1.desc") },
-              { title: t("home.features.f2.title"), desc: t("home.features.f2.desc") },
-              { title: t("home.features.f3.title"), desc: t("home.features.f3.desc") },
-              { title: t("home.features.f4.title"), desc: t("home.features.f4.desc") },
-              { title: t("home.features.f5.title"), desc: t("home.features.f5.desc") },
-              { title: t("home.features.f6.title"), desc: t("home.features.f6.desc") }
-            ].map((feature, i) => (
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -136,8 +129,8 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center mb-4 text-secondary">
                   <CheckCircle className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-foreground/70">{feature.desc}</p>
+                <h3 className="text-xl font-bold mb-2">{t(`home.why.f${i}.title`)}</h3>
+                <p className="text-foreground/70">{t(`home.why.f${i}.desc`)}</p>
               </motion.div>
             ))}
           </div>
