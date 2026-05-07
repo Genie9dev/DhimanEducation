@@ -51,14 +51,15 @@ export default function AboutPage() {
             </motion.div>
             <motion.div 
               {...fadeInUp}
-              className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
+              className="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800"
             >
               <Image 
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" 
-                alt="Coaching Class" 
+                src="/coaching_class_about_1778166146698.png" 
+                alt="Dhiman Education Classroom" 
                 fill 
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </motion.div>
           </div>
         </div>
