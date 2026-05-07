@@ -98,15 +98,15 @@ export default function ResultsPage() {
           <div className="flex flex-wrap justify-center gap-8">
             <div className="bg-card border border-border p-6 rounded-xl min-w-[200px]">
               <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-foreground/70 text-sm">Students scored &gt; 90%</div>
+              <div className="text-foreground/70 text-sm">{t("results.s1")}</div>
             </div>
             <div className="bg-card border border-border p-6 rounded-xl min-w-[200px]">
               <div className="text-4xl font-bold text-primary mb-2">100+</div>
-              <div className="text-foreground/70 text-sm">Distinction Holders</div>
+              <div className="text-foreground/70 text-sm">{t("results.s2")}</div>
             </div>
             <div className="bg-card border border-border p-6 rounded-xl min-w-[200px]">
               <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-foreground/70 text-sm">Passing Rate</div>
+              <div className="text-foreground/70 text-sm">{t("results.s3")}</div>
             </div>
           </div>
         </div>

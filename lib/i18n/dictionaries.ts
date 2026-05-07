@@ -53,6 +53,39 @@ export const en: Dictionary = {
   "home.cta.enroll": "Enroll Now",
   "home.cta.chat": "Chat on WhatsApp",
 
+  "home.features.f1.title": "Personal Attention",
+  "home.features.f1.desc": "Small batch sizes to ensure every student gets the focus they need.",
+  "home.features.f2.title": "Experienced Teachers",
+  "home.features.f2.desc": "Highly qualified faculty with years of experience in GSEB curriculum.",
+  "home.features.f3.title": "Regular Tests",
+  "home.features.f3.desc": "Weekly and monthly assessments to track progress and improve weak areas.",
+  "home.features.f4.title": "Parent-Teacher Comm.",
+  "home.features.f4.desc": "Regular updates to parents regarding student progress and attendance.",
+  "home.features.f5.title": "Result-Oriented",
+  "home.features.f5.desc": "Proven track record of board exam toppers in Mehsana year after year.",
+  "home.features.f6.title": "Student Guidance",
+  "home.features.f6.desc": "Career counseling and motivational sessions to keep students focused.",
+
+  // About Page
+  "about.title": "About Dhiman Education",
+  "about.subtitle": "Empowering students with knowledge, discipline, and the guidance needed to excel in GSEB Board Exams.",
+  "about.legacy.title": "Our Legacy of Excellence",
+  "about.legacy.desc1": "Located in the heart of Unjha, Dhiman Education has been the cornerstone of academic success for hundreds of students. We specialize in providing top-tier coaching for GSEB Board students from Standard 6 to 12.",
+  "about.legacy.desc2": "We believe that every student has the potential to achieve greatness. Our approach combines rigorous academic training with personal mentoring, ensuring that our students not only score high marks but also develop a strong foundation for their future careers.",
+  "about.mission.title": "Our Mission",
+  "about.mission.desc": "To provide high-quality, result-oriented education that empowers students to achieve their academic goals. We strive to create an environment that fosters intellectual growth, critical thinking, and a lifelong love for learning.",
+  "about.vision.title": "Our Vision",
+  "about.vision.desc": "To be the most trusted and premier coaching institute in Unjha and surrounding regions, recognized for our commitment to student success, innovative teaching methodologies, and holistic development.",
+  "about.philosophy.title": "Our Teaching Philosophy",
+  "about.philosophy.p1.title": "Student-Centric Approach",
+  "about.philosophy.p1.desc": "Every student learns differently. We tailor our teaching methods to accommodate individual learning paces and styles.",
+  "about.philosophy.p2.title": "Focus on Discipline",
+  "about.philosophy.p2.desc": "Discipline is the bridge between goals and accomplishment. We maintain strict attendance and behavioral standards.",
+  "about.philosophy.p3.title": "Conceptual Clarity",
+  "about.philosophy.p3.desc": "Instead of rote learning, we focus on deep conceptual understanding which helps in long-term retention.",
+  "about.philosophy.p4.title": "Continuous Evaluation",
+  "about.philosophy.p4.desc": "Regular testing ensures that students are exam-ready and helps us identify areas needing improvement.",
+
   // Courses Page
   "courses.title": "Our Courses",
   "courses.desc": "Comprehensive coaching programs designed for GSEB Board students.",
@@ -61,6 +94,7 @@ export const en: Dictionary = {
   "courses.c3.desc": "Dedicated guidance for Arts stream subjects to ensure excellent board results. We focus on enhancing writing skills, critical thinking, and subject comprehension.",
   "courses.features": "Key Features",
   "courses.why": "Why this course?",
+  "courses.enquire": "Enquire Now",
   
   // Results Page
   "results.title": "100% Result Guarantee",
@@ -68,6 +102,13 @@ export const en: Dictionary = {
   "results.hof": "Hall of Fame",
   "results.hofDesc": "Celebrating the outstanding achievements of our shining stars in the recent GSEB board exams.",
   "results.summary": "Overall Performance Summary",
+  "results.s1": "Students scored > 90%",
+  "results.s2": "Distinction Holders",
+  "results.s3": "Passing Rate",
+
+  // Gallery Page
+  "gallery.title": "Life at Dhiman Education",
+  "gallery.desc": "Take a look at our classrooms, events, and the vibrant environment where our students grow.",
 
   // Contact Page
   "contact.title": "Contact Us",
@@ -146,6 +187,39 @@ export const gu: Dictionary = {
   "home.cta.enroll": "અત્યારે નોંધણી કરો",
   "home.cta.chat": "WhatsApp પર વાત કરો",
 
+  "home.features.f1.title": "વ્યક્તિગત ધ્યાન",
+  "home.features.f1.desc": "દરેક વિદ્યાર્થીને જરૂરી ધ્યાન મળે તે સુનિશ્ચિત કરવા માટે નાની બેચ.",
+  "home.features.f2.title": "અનુભવી શિક્ષકો",
+  "home.features.f2.desc": "GSEB અભ્યાસક્રમમાં વર્ષોનો અનુભવ ધરાવતા ઉચ્ચ લાયકાત ધરાવતા શિક્ષકો.",
+  "home.features.f3.title": "નિયમિત ટેસ્ટ",
+  "home.features.f3.desc": "પ્રગતિને ટ્રેક કરવા અને નબળા ક્ષેત્રોમાં સુધારો કરવા માટે સાપ્તાહિક અને માસિક મૂલ્યાંકન.",
+  "home.features.f4.title": "વાલી-શિક્ષક સંપર્ક",
+  "home.features.f4.desc": "વિદ્યાર્થીની પ્રગતિ અને હાજરી અંગે વાલીઓને નિયમિત અપડેટ્સ.",
+  "home.features.f5.title": "પરિણામલક્ષી",
+  "home.features.f5.desc": "મહેસાણામાં વર્ષો-વર્ષ બોર્ડ પરીક્ષામાં ટોપર્સનો સાબિત થયેલ રેકોર્ડ.",
+  "home.features.f6.title": "વિદ્યાર્થી માર્ગદર્શન",
+  "home.features.f6.desc": "વિદ્યાર્થીઓને ધ્યાન કેન્દ્રિત રાખવા માટે કારકિર્દી કાઉન્સેલિંગ અને પ્રેરણાત્મક સત્રો.",
+
+  // About Page
+  "about.title": "ધિમાન એજ્યુકેશન વિશે",
+  "about.subtitle": "વિદ્યાર્થીઓને જ્ઞાન, શિસ્ત અને GSEB બોર્ડની પરીક્ષાઓમાં શ્રેષ્ઠ દેખાવ કરવા માટે જરૂરી માર્ગદર્શન સાથે સશક્ત બનાવવા.",
+  "about.legacy.title": "અમારો શ્રેષ્ઠ વારસો",
+  "about.legacy.desc1": "ઊંઝાના હૃદયમાં સ્થિત, ધિમાન એજ્યુકેશન સેંકડો વિદ્યાર્થીઓ માટે શૈક્ષણિક સફળતાનો પાયાનો પથ્થર રહ્યો છે. અમે ધોરણ 6 થી 12 ના GSEB બોર્ડના વિદ્યાર્થીઓ માટે ઉચ્ચ સ્તરીય કોચિંગ પ્રદાન કરવામાં નિષ્ણાત છીએ.",
+  "about.legacy.desc2": "અમારું માનવું છે કે દરેક વિદ્યાર્થીમાં મહાનતા પ્રાપ્ત કરવાની ક્ષમતા હોય છે. અમારો અભિગમ વ્યક્તિગત માર્ગદર્શન સાથે સઘન શૈક્ષણિક તાલીમને જોડે છે, જે સુનિશ્ચિત કરે છે કે અમારા વિદ્યાર્થીઓ માત્ર ઉચ્ચ ગુણ મેળવે એટલું જ નહીં પરંતુ તેમના ભાવિ કારકિર્દી માટે મજબૂત પાયો પણ વિકસાવે.",
+  "about.mission.title": "અમારું લક્ષ્ય",
+  "about.mission.desc": "ઉચ્ચ-ગુણવત્તાવાળું, પરિણામલક્ષી શિક્ષણ પ્રદાન કરવું જે વિદ્યાર્થીઓને તેમના શૈક્ષણિક લક્ષ્યો પ્રાપ્ત કરવા માટે સક્ષમ બનાવે. અમે એવું વાતાવરણ બનાવવાનો પ્રયત્ન કરીએ છીએ જે બૌદ્ધિક વિકાસ, વિવેચનાત્મક વિચારસરણી અને શીખવા માટે જીવનભરના પ્રેમને પ્રોત્સાહન આપે.",
+  "about.vision.title": "અમારો દ્રષ્ટિકોણ",
+  "about.vision.desc": "ઊંઝા અને આસપાસના પ્રદેશોમાં સૌથી વિશ્વસનીય અને અગ્રણી કોચિંગ સંસ્થા બનવું, જે વિદ્યાર્થીઓની સફળતા, નવીન શિક્ષણ પદ્ધતિઓ અને સર્વાંગી વિકાસ માટેની અમારી પ્રતિબત્તા માટે જાણીતી છે.",
+  "about.philosophy.title": "અમારી શિક્ષણ ફિલોસોફી",
+  "about.philosophy.p1.title": "વિદ્યાર્થી-કેન્દ્રી અભિગમ",
+  "about.philosophy.p1.desc": "દરેક વિદ્યાર્થી અલગ રીતે શીખે છે. અમે વ્યક્તિગત શીખવાની ગતિ અને શૈલીઓને અનુરૂપ અમારી શિક્ષણ પદ્ધતિઓ તૈયાર કરીએ છીએ.",
+  "about.philosophy.p2.title": "શિસ્ત પર ધ્યાન",
+  "about.philosophy.p2.desc": "શિસ્ત એ લક્ષ્યો અને સિદ્ધિ વચ્ચેનો સેતુ છે. અમે કડક હાજરી અને વર્તણૂક ધોરણો જાળવીએ છીએ.",
+  "about.philosophy.p3.title": "વૈચારિક સ્પષ્ટતા",
+  "about.philosophy.p3.desc": "ગોખણપટ્ટીને બદલે, અમે ઊંડી વૈચારિક સમજ પર ધ્યાન કેન્દ્રિત કરીએ છીએ જે લાંબા ગાળાના સ્મરણમાં મદદ કરે છે.",
+  "about.philosophy.p4.title": "સતત મૂલ્યાંકન",
+  "about.philosophy.p4.desc": "નિયમિત પરીક્ષણ સુનિશ્ચિત કરે છે કે વિદ્યાર્થીઓ પરીક્ષા માટે તૈયાર છે અને અમને સુધારણાની જરૂર હોય તેવા ક્ષેત્રો ઓળખવામાં મદદ કરે છે.",
+
   // Courses Page
   "courses.title": "અમારા કોર્સ",
   "courses.desc": "GSEB બોર્ડના વિદ્યાર્થીઓ માટે રચાયેલ વ્યાપક કોચિંગ પ્રોગ્રામ્સ.",
@@ -154,13 +228,21 @@ export const gu: Dictionary = {
   "courses.c3.desc": "ઉત્કૃષ્ટ બોર્ડ પરિણામો સુનિશ્ચિત કરવા માટે આર્ટસ પ્રવાહના વિષયો માટે સમર્પિત માર્ગદર્શન. અમે લેખન કૌશલ્ય, વિવેચનાત્મક વિચારસરણી અને વિષયની સમજ વધારવા પર ધ્યાન કેન્દ્રિત કરીએ છીએ.",
   "courses.features": "મુખ્ય લક્ષણો",
   "courses.why": "આ કોર્સ શા માટે?",
-
+  "courses.enquire": "પૂછપરછ કરો",
+  
   // Results Page
   "results.title": "100% પરિણામની ગેરંટી",
   "results.desc": "મહેસાણા માં સૌપ્રથમવાર ધોરણ 10 અને 12 ની બોર્ડની પરીક્ષામાં પાસ થવાની 100% લેખિત ગેરંટી .",
   "results.hof": "હોલ ઓફ ફેમ",
   "results.hofDesc": "તાજેતરની GSEB બોર્ડની પરીક્ષાઓમાં અમારા ચમકતા તારાઓની ઉત્કૃષ્ટ સિદ્ધિઓની ઉજવણી.",
   "results.summary": "એકંદર કામગીરીનો સારાંશ",
+  "results.s1": "૯૦% થી વધુ ગુણ મેળવનાર વિદ્યાર્થીઓ",
+  "results.s2": "ડિસ્ટિંકશન ધારકો",
+  "results.s3": "પાસિંગ રેટ",
+
+  // Gallery Page
+  "gallery.title": "ધિમાન એજ્યુકેશનમાં જીવન",
+  "gallery.desc": "અમારા વર્ગખંડો, કાર્યક્રમો અને વાઇબ્રન્ટ વાતાવરણ પર એક નજર નાખો જ્યાં અમારા વિદ્યાર્થીઓ વિકાસ પામે છે.",
 
   // Contact Page
   "contact.title": "અમારો સંપર્ક કરો",

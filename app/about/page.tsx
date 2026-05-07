@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import Image from "next/image";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function AboutPage() {
+  const { t } = useLanguage();
+  
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -20,13 +22,13 @@ export default function AboutPage() {
             {...fadeInUp}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            About Dhiman Education
+            {t("about.title")}
           </motion.h1>
           <motion.p 
             {...fadeInUp} transition={{ delay: 0.1 }}
             className="text-slate-300 text-lg max-w-2xl mx-auto"
           >
-            Empowering students with knowledge, discipline, and the guidance needed to excel in GSEB Board Exams.
+            {t("about.subtitle")}
           </motion.p>
         </div>
       </section>
@@ -41,12 +43,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="w-full md:w-1/2 space-y-6"
             >
-              <h2 className="text-3xl font-bold text-primary">Our Legacy of Excellence</h2>
+              <h2 className="text-3xl font-bold text-primary">{t("about.legacy.title")}</h2>
               <p className="text-foreground/80 leading-relaxed text-lg">
-                Located in the heart of Unjha, Dhiman Education has been the cornerstone of academic success for hundreds of students. We specialize in providing top-tier coaching for GSEB Board students from Standard 6 to 12.
+                {t("about.legacy.desc1")}
               </p>
               <p className="text-foreground/80 leading-relaxed">
-                We believe that every student has the potential to achieve greatness. Our approach combines rigorous academic training with personal mentoring, ensuring that our students not only score high marks but also develop a strong foundation for their future careers.
+                {t("about.legacy.desc2")}
               </p>
             </motion.div>
             <motion.div 
@@ -56,9 +58,8 @@ export default function AboutPage() {
               className="w-full md:w-1/2"
             >
               <div className="aspect-video bg-primary/10 rounded-2xl border border-border/50 flex items-center justify-center relative overflow-hidden">
-                {/* Placeholder for Institute Image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-                <span className="text-primary/50 font-medium">Institute Image Placeholder</span>
+                <span className="text-primary/50 font-medium">Dhiman Education Campus</span>
               </div>
             </motion.div>
           </div>
@@ -75,9 +76,9 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="p-8 bg-card rounded-2xl border border-border shadow-sm"
             >
-              <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">{t("about.mission.title")}</h3>
               <p className="text-foreground/80 leading-relaxed">
-                To provide high-quality, result-oriented education that empowers students to achieve their academic goals. We strive to create an environment that fosters intellectual growth, critical thinking, and a lifelong love for learning.
+                {t("about.mission.desc")}
               </p>
             </motion.div>
             <motion.div 
@@ -87,9 +88,9 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="p-8 bg-card rounded-2xl border border-border shadow-sm"
             >
-              <h3 className="text-2xl font-bold text-secondary mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-secondary mb-4">{t("about.vision.title")}</h3>
               <p className="text-foreground/80 leading-relaxed">
-                To be the most trusted and premier coaching institute in Unjha and surrounding regions, recognized for our commitment to student success, innovative teaching methodologies, and holistic development.
+                {t("about.vision.desc")}
               </p>
             </motion.div>
           </div>
@@ -100,13 +101,13 @@ export default function AboutPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Teaching Philosophy</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">{t("about.philosophy.title")}</h2>
             <div className="space-y-6">
               {[
-                { title: "Student-Centric Approach", desc: "Every student learns differently. We tailor our teaching methods to accommodate individual learning paces and styles." },
-                { title: "Focus on Discipline", desc: "Discipline is the bridge between goals and accomplishment. We maintain strict attendance and behavioral standards." },
-                { title: "Conceptual Clarity", desc: "Instead of rote learning, we focus on deep conceptual understanding which helps in long-term retention." },
-                { title: "Continuous Evaluation", desc: "Regular testing ensures that students are exam-ready and helps us identify areas needing improvement." }
+                { title: t("about.philosophy.p1.title"), desc: t("about.philosophy.p1.desc") },
+                { title: t("about.philosophy.p2.title"), desc: t("about.philosophy.p2.desc") },
+                { title: t("about.philosophy.p3.title"), desc: t("about.philosophy.p3.desc") },
+                { title: t("about.philosophy.p4.title"), desc: t("about.philosophy.p4.desc") }
               ].map((item, i) => (
                 <motion.div 
                   key={i}

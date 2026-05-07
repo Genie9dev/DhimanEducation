@@ -118,12 +118,12 @@ export default function Home() {
           {/* Rest of this section remains static or we can translate it later. I will leave it static English for now since it's not in the dictionary to save space, or I can just leave it as is. */}
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Personal Attention", desc: "Small batch sizes to ensure every student gets the focus they need." },
-              { title: "Experienced Teachers", desc: "Highly qualified faculty with years of experience in GSEB curriculum." },
-              { title: "Regular Tests", desc: "Weekly and monthly assessments to track progress and improve weak areas." },
-              { title: "Parent-Teacher Comm.", desc: "Regular updates to parents regarding student progress and attendance." },
-              { title: "Result-Oriented", desc: "Proven track record of board exam toppers in Mehsana year after year." },
-              { title: "Student Guidance", desc: "Career counseling and motivational sessions to keep students focused." }
+              { title: t("home.features.f1.title"), desc: t("home.features.f1.desc") },
+              { title: t("home.features.f2.title"), desc: t("home.features.f2.desc") },
+              { title: t("home.features.f3.title"), desc: t("home.features.f3.desc") },
+              { title: t("home.features.f4.title"), desc: t("home.features.f4.desc") },
+              { title: t("home.features.f5.title"), desc: t("home.features.f5.desc") },
+              { title: t("home.features.f6.title"), desc: t("home.features.f6.desc") }
             ].map((feature, i) => (
               <motion.div 
                 key={i}

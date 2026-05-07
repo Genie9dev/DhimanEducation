@@ -20,12 +20,12 @@ export default function CoursesPage() {
       title: t("home.courses.c1.title"),
       description: t("courses.c1.desc"),
       color: "bg-blue-500",
-      subjects: ["Maths", "Science", "S.S", "English"],
+      subjects: t("home.courses.c1.desc").split(", "),
       features: [
-        "Interactive learning methods",
-        "Weekly concept tests",
-        "Personalized attention",
-        "Doubt solving sessions"
+        t("about.philosophy.p1.title"),
+        t("about.philosophy.p4.title"),
+        t("home.features.f1.title"),
+        t("about.philosophy.p3.title")
       ],
       timing: "4:00 PM - 7:00 PM"
     },
@@ -33,12 +33,12 @@ export default function CoursesPage() {
       title: t("home.courses.c2.title"),
       description: t("courses.c2.desc"),
       color: "bg-secondary",
-      subjects: ["Account", "Stat", "Economics", "B.A", "English"],
+      subjects: t("home.courses.c2.desc").split(", "),
       features: [
-        "Expert faculty for Accountancy",
-        "Real-world case studies",
-        "Regular board-pattern exams",
-        "Career guidance"
+        t("home.features.f2.title"),
+        t("home.features.f5.title"),
+        t("about.philosophy.p4.title"),
+        t("home.features.f6.title")
       ],
       timing: "7:00 AM - 11:00 AM"
     },
@@ -46,12 +46,12 @@ export default function CoursesPage() {
       title: t("home.courses.c3.title"),
       description: t("courses.c3.desc"),
       color: "bg-purple-500",
-      subjects: ["Sociology", "Psychology", "Economics", "English"],
+      subjects: t("home.courses.c3.desc").split(", "),
       features: [
-        "In-depth concept building",
-        "Answer writing practice",
-        "Previous year paper solving",
-        "Focus on scoring high"
+        t("about.philosophy.p3.title"),
+        t("home.features.f6.title"),
+        t("about.philosophy.p4.title"),
+        t("home.features.f5.title")
       ],
       timing: "4:00 PM - 8:00 PM"
     }
@@ -141,7 +141,7 @@ export default function CoursesPage() {
 
                 <div className="pt-6 border-t border-border mt-auto">
                   <Button asChild>
-                    <Link href={`/contact?course=${encodeURIComponent(course.title)}`}>Enquire Now</Link>
+                    <Link href={`/contact?course=${encodeURIComponent(course.title)}`}>{t("courses.enquire")}</Link>
                   </Button>
                 </div>
               </div>

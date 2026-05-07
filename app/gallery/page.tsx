@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Image as ImageIcon } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function GalleryPage() {
+  const { t } = useLanguage();
   const categories = ["All", "Classrooms", "Events", "Awards", "Infrastructure"];
   
   // Generating placeholders for the gallery
@@ -23,7 +25,7 @@ export default function GalleryPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Gallery
+            {t("nav.gallery")}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -31,7 +33,7 @@ export default function GalleryPage() {
             transition={{ delay: 0.1 }}
             className="text-slate-300 text-lg max-w-2xl mx-auto"
           >
-            A glimpse into the vibrant academic life and infrastructure at Dhiman Education.
+            {t("gallery.desc")}
           </motion.p>
         </div>
       </section>
