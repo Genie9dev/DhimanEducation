@@ -16,13 +16,13 @@ export async function addFeeRecord(prevState: any, formData: FormData) {
     .insert([{ student_id, amount, due_date, status }])
 
   if (error) {
-    return { error: error.message, success: false }
+    return { error: error.message, success: false, message: "" }
   }
 
   revalidatePath('/admin/dashboard/fees')
   revalidatePath('/admin/dashboard')
   
-  return { success: true, message: "Fee record added successfully!" }
+  return { success: true, message: "Fee record added successfully!", error: "" }
 }
 
 export async function updateFeeStatus(id: string, newStatus: string) {

@@ -28,11 +28,11 @@ export async function addStudent(prevState: any, formData: FormData) {
     .insert([{ name, email, standard, phone, status: 'Active', registration_code }])
 
   if (error) {
-    return { error: error.message, success: false, registration_code: null }
+    return { error: error.message, success: false, message: "", registration_code: null }
   }
 
   revalidatePath('/admin/dashboard/students')
   revalidatePath('/admin/dashboard')
   
-  return { success: true, message: "Student added successfully!", registration_code }
+  return { success: true, message: "Student added successfully!", registration_code, error: "" }
 }

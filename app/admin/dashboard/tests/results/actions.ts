@@ -32,5 +32,5 @@ export async function saveMarks(prevState: any, formData: FormData) {
   revalidatePath('/admin/dashboard/tests')
   revalidatePath('/student/dashboard/tests')
 
-  return { success: true, error: null }
+  return { success: true, error: "" }
 }

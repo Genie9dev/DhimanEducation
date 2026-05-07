@@ -14,11 +14,11 @@ export async function registerStudent(prevState: any, formData: FormData) {
   const confirmPassword = formData.get('confirm_password') as string
 
   if (password !== confirmPassword) {
-    return { error: "Passwords do not match.", success: false }
+    return { error: "Passwords do not match.", success: false, studentName: "" }
   }
 
   if (password.length < 6) {
-    return { error: "Password must be at least 6 characters.", success: false }
+    return { error: "Password must be at least 6 characters.", success: false, studentName: "" }
   }
 
   // 1. Find the student record for this code (admin client bypasses RLS)
@@ -29,12 +29,12 @@ export async function registerStudent(prevState: any, formData: FormData) {
     .single()
 
   if (lookupError || !student) {
-    return { error: "Invalid registration code. Please check with your teacher.", success: false }
+    return { error: "Invalid registration code. Please check with your teacher.", success: false, studentName: "" }
   }
 
   // 2. SECURITY CHECK: If auth_id is already set, the code has been used
   if (student.auth_id) {
-    return { error: "This registration code has already been used. Please contact Dhiman Education.", success: false }
+    return { error: "This registration code has already been used. Please contact Dhiman Education.", success: false, studentName: "" }
   }
 
   // 3. Create the Auth user with email auto-confirmed (admin bypasses email verification)
@@ -46,7 +46,7 @@ export async function registerStudent(prevState: any, formData: FormData) {
   })
 
   if (signUpError) {
-    return { error: signUpError.message, success: false }
+    return { error: signUpError.message, success: false, studentName: "" }
   }
 
   // 4. Link the Supabase Auth user ID to the student record — LOCKS the code permanently
@@ -60,6 +60,6 @@ export async function registerStudent(prevState: any, formData: FormData) {
   return {
     success: true,
     studentName: student.name,
-    error: null,
+    error: "",
   }
 }

@@ -17,14 +17,14 @@ export async function addTest(prevState: any, formData: FormData) {
     .insert([{ title, standard, date, syllabus, total_marks }])
 
   if (error) {
-    return { error: error.message, success: false }
+    return { error: error.message, success: false, message: "" }
   }
 
   revalidatePath('/admin/dashboard/tests')
   revalidatePath('/admin/dashboard')
   revalidatePath('/student/dashboard')
   
-  return { success: true, message: "Test scheduled successfully!" }
+  return { success: true, message: "Test scheduled successfully!", error: "" }
 }
 
 export async function updateTestDate(id: string, newDate: string) {

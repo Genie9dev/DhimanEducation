@@ -14,11 +14,11 @@ export async function addAnnouncement(prevState: any, formData: FormData) {
     .insert([{ title, content }])
 
   if (error) {
-    return { error: error.message, success: false }
+    return { error: error.message, success: false, message: "" }
   }
 
   revalidatePath('/admin/dashboard/announcements')
   revalidatePath('/student/dashboard')
   
-  return { success: true, message: "Announcement posted successfully!" }
+  return { success: true, message: "Announcement posted successfully!", error: "" }
 }
