@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { registerStudent } from "./actions";
 import Link from "next/link";
 
-const initialState = { error: "", success: false, studentName: "" };
+const initialState: { error: string; success: boolean; studentName: string } = { error: "", success: false, studentName: "" };
 
 export default function StudentRegisterPage() {
   const [state, formAction, isPending] = useActionState(registerStudent, initialState);

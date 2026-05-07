@@ -6,11 +6,16 @@ import { Button } from "@/components/ui/Button";
 import { addStudent } from "./actions";
 import { createBrowserClient } from '@supabase/ssr'
 
-const initialState = {
+const initialState: {
+  error: string;
+  success: boolean;
+  message: string;
+  registration_code: string | null;
+} = {
   error: "",
   success: false,
   message: "",
-  registration_code: null as string | null,
+  registration_code: null,
 };
 
 export default function StudentsPage() {

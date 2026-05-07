@@ -7,7 +7,7 @@ import { addTest, updateTestDate } from "./actions";
 import { createBrowserClient } from '@supabase/ssr'
 import Link from "next/link";
 
-const initialState = {
+const initialState: { error: string; success: boolean; message: string } = {
   error: "",
   success: false,
   message: ""
@@ -207,4 +207,5 @@ export default function TestsPage() {
     </div>
   );
 }
+
 

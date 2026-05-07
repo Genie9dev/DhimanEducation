@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { saveMarks } from "./actions";
 import Link from "next/link";
 
-const initialState = { error: "", success: false };
+const initialState: { error: string; success: boolean } = { error: "", success: false };
 
 export default function EnterMarksClient({
   test,

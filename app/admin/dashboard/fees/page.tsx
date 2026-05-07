@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { addFeeRecord, updateFeeStatus } from "./actions";
 import { createBrowserClient } from '@supabase/ssr'
 
-const initialState = {
+const initialState: { error: string; success: boolean; message: string } = {
   error: "",
   success: false,
   message: ""
@@ -171,4 +171,5 @@ export default function FeesPage() {
     </div>
   );
 }
+
 
